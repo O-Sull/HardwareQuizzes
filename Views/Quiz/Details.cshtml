@@ -1,0 +1,14 @@
+@model Quiz
+<h2>@Model.Title</h2>
+<p>@Model.Description</p>
+<pre><code class="language-vhdl">@Model.CodeTemplate</code></pre>
+
+<form asp-action="Submit" method="post">
+    <textarea name="userCode" class="form-control" rows="10"></textarea>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<!-- Highlight.js for syntax coloring -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>

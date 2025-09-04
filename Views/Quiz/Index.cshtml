@@ -1,0 +1,10 @@
+@model IEnumerable<Quiz>
+<h1>Hardware Engineering Challenges</h1>
+<table class="table">
+    @foreach (var quiz in Model) {
+        <tr>
+            <td><a asp-action="Details" asp-route-id="@quiz.Id">@quiz.Title</a></td>
+            <td>@quiz.Difficulty</td>
+        </tr>
+    }
+</table>
